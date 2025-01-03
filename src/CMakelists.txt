@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Model)
+set(CMAKE_CXX_STANDARD 17)
+
+set(SOURCES
+    main.cpp
+    conv2d.cpp
+    dense.cpp
+    max_pooling.cpp
+    relu.cpp
+    flatten.cpp
+    softmax.cpp
+    utils.cpp 
+    test.cpp
+)
+
+include_directories("D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp/vcpkg/installed/x64-windows/include")
+
+# Add the executable
+add_executable(Model ${SOURCES})

@@ -1,0 +1,385 @@
+[
+    {
+        "layer_name": "conv2d",
+        "layer_type": "Conv2D",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/conv2d_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/conv2d_output.txt",
+        "weights_files_path":[
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_kernel.txt",
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_bias.txt"
+        ],
+        "config": {
+            "name": "conv2d",
+            "trainable": true,
+            "input_channels":3,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "filters": 128,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "data_format": "channels_last",
+            "dilation_rate": [
+                1,
+                1
+            ],
+            "groups": 1,
+            "activation": "relu",
+            "use_bias": true,
+            "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": {
+                    "seed": null
+                },
+                "registered_name": null
+            },
+            "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+            },
+            "kernel_regularizer": null,
+            "bias_regularizer": null,
+            "activity_regularizer": null,
+            "kernel_constraint": null,
+            "bias_constraint": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    
+    {
+        "layer_name": "max_pooling2d",
+        "layer_type": "MaxPooling2D",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/max_pooling2d_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/max_pooling2d_output.txt",
+        "config": {
+            "name": "max_pooling2d",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "pool_size": [
+                2,
+                2
+            ],
+            "padding": "valid",
+            "strides": [
+                2,
+                2
+            ],
+            "data_format": "channels_last"
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "conv2d_1",
+        "layer_type": "Conv2D",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/conv2d_1_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/conv2d_1_output.txt",
+        "weights_files_path":[
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_1_kernel.txt",
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_1_bias.txt"
+        ],
+        "config": {
+            "name": "conv2d_1",
+            "trainable": true,
+            "input_channels":128,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "filters": 128,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "data_format": "channels_last",
+            "dilation_rate": [
+                1,
+                1
+            ],
+            "groups": 1,
+            "activation": "relu",
+            "use_bias": true,
+            "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": {
+                    "seed": null
+                },
+                "registered_name": null
+            },
+            "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+            },
+            "kernel_regularizer": null,
+            "bias_regularizer": null,
+            "activity_regularizer": null,
+            "kernel_constraint": null,
+            "bias_constraint": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "max_pooling2d_1",
+        "layer_type": "MaxPooling2D",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/max_pooling2d_1_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/max_pooling2d_1_output.txt",
+        "config": {
+            "name": "max_pooling2d_1",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "pool_size": [
+                2,
+                2
+            ],
+            "padding": "valid",
+            "strides": [
+                2,
+                2
+            ],
+            "data_format": "channels_last"
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "conv2d_2",
+        "layer_type": "Conv2D",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/conv2d_2_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/conv2d_2_output.txt",
+        "weights_files_path":[
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_2_kernel.txt",
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/conv2d_2_bias.txt"
+        ],
+        "config": {
+            "name": "conv2d_2",
+            "trainable": true,
+            "input_channels":128,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "filters": 128,
+            "kernel_size": [
+                3,
+                3
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "valid",
+            "data_format": "channels_last",
+            "dilation_rate": [
+                1,
+                1
+            ],
+            "groups": 1,
+            "activation": "relu",
+            "use_bias": true,
+            "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": {
+                    "seed": null
+                },
+                "registered_name": null
+            },
+            "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+            },
+            "kernel_regularizer": null,
+            "bias_regularizer": null,
+            "activity_regularizer": null,
+            "kernel_constraint": null,
+            "bias_constraint": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "flatten",
+        "layer_type": "Flatten",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/flatten_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/flatten_output.txt",
+        "config": {
+            "name": "flatten",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "data_format": "channels_last"
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "dense",
+        "layer_type": "Dense",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/dense_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/dense_output.txt",
+        "weights_files_path":[
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/dense_kernel.txt",
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/dense_bias.txt"
+        ],
+        "config": {
+            "name": "dense",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "input_units":2024,
+            "units": 128,
+            "activation": "relu",
+            "use_bias": true,
+            "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": {
+                    "seed": null
+                },
+                "registered_name": null
+            },
+            "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+            },
+            "kernel_regularizer": null,
+            "bias_regularizer": null,
+            "kernel_constraint": null,
+            "bias_constraint": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "dropout",
+        "layer_type": "Dropout",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/dropout_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/dropout_output.txt",
+        "config": {
+            "name": "dropout",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "rate": 0.2,
+            "seed": null,
+            "noise_shape": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    },
+    {
+        "layer_name": "dense_1",
+        "layer_type": "Dense",
+        "input_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/input/dense_1_input.txt",
+        "output_file_path":"D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/output/dense_1_output.txt",
+        "weights_files_path":[
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/dense_1_kernel.txt",
+            "D:/Documents_personal/Multicoreware/assignments/assignment 2/cpp cifar-10/data/weights/dense_1_bias.txt"
+        ],
+        "config": {
+            "name": "dense_1",
+            "trainable": true,
+            "dtype": {
+                "module": "keras",
+                "class_name": "DTypePolicy",
+                "config": {
+                    "name": "float32"
+                },
+                "registered_name": null
+            },
+            "input_units":128,
+            "units": 10,
+            "activation": "softmax",
+            "use_bias": true,
+            "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": {
+                    "seed": null
+                },
+                "registered_name": null
+            },
+            "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+            },
+            "kernel_regularizer": null,
+            "bias_regularizer": null,
+            "kernel_constraint": null,
+            "bias_constraint": null
+        },
+        "input_shape": null,
+        "output_shape": null
+    }
+]
