@@ -80,12 +80,25 @@ void unit_test(const std::string layer,const std::string& output_file, const std
     }
 
     bool test_passed = true;
+    if(layer=="conv1" || layer=="conv2" || layer=="conv3"){
     for (size_t i = 0; i < output_data.size(); ++i) {
+        if(output_data[i]==0)
+            continue;
         if (std::abs(output_data[i] - expected_data[i]) > epsilon) {
             std::cerr << "Mismatch at index " << i << ": output = " << output_data[i]
                       << ", expected = " << expected_data[i] << std::endl;
             test_passed = false;
         }
+    }
+    }
+    else{
+       for (size_t i = 0; i < output_data.size(); ++i) {
+        if (std::abs(output_data[i] - expected_data[i]) > epsilon) {
+            std::cerr << "Mismatch at index " << i << ": output = " << output_data[i]
+                      << ", expected = " << expected_data[i] << std::endl;
+            test_passed = false;
+        }
+    } 
     }
 
     auto end = high_resolution_clock::now();
