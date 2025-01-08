@@ -1,11 +1,20 @@
 conv1 Test Passed: All values match within tolerance (0.001).
+conv1 Comparison Time: 543 ms
 pool1 Test Passed: All values match within tolerance (0.001).
+pool1 Comparison Time: 141 ms
 conv2 Test Passed: All values match within tolerance (0.001).
+conv2 Comparison Time: 110 ms
 pool2 Test Passed: All values match within tolerance (0.001).
+pool2 Comparison Time: 52 ms
 conv3 Test Passed: All values match within tolerance (0.001).
+conv3 Comparison Time: 23 ms
 flatten Test Passed: All values match within tolerance (0.001).
+flatten Comparison Time: 20 ms
 dense1 Test Passed: All values match within tolerance (0.001).
+dense1 Comparison Time: 11 ms
 dense2 Test Passed: All values match within tolerance (0.001).
+dense2 Comparison Time: 8 ms
 Output Max Index: 4 with value 0.734252
 Expected Max Index: 4 with value 0.734253
 Test Passed: The classification results match.
+Model Test Comparison Time: 0 ms
