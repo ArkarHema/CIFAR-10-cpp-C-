@@ -5,8 +5,9 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <chrono>
 
-std::ofstream result_file("results.txt", std::ios::app);
+std::ofstream result_file("test.txt", std::ios::app);
 
 // Utility function to read a file into a 1D vector
 std::vector<float> read_file_to_vector(const std::string& file_path) {
@@ -32,6 +33,8 @@ std::vector<float> read_file_to_vector(const std::string& file_path) {
 
 // Function to compare the highest values (classification) from two output files
 void model_test(const std::string& output_file, const std::string& expected_file) {
+    using namespace std::chrono;
+    auto start = high_resolution_clock::now();
     auto output_data = read_file_to_vector(output_file);
     auto expected_data = read_file_to_vector(expected_file);
 
@@ -52,9 +55,12 @@ void model_test(const std::string& output_file, const std::string& expected_file
     result_file << "Output Max Index: " << output_max_index << " with value " << output_data[output_max_index] << std::endl;
     result_file << "Expected Max Index: " << expected_max_index << " with value " << expected_data[expected_max_index] << std::endl;
 
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
     // Compare the indices
     if (output_max_index == expected_max_index) {
         result_file << "Test Passed: The classification results match." << std::endl;
+        result_file << "Model Test Comparison Time: " << duration.count() << " ms" << std::endl;
     } else {
         std::cerr << "Test Failed: Classification results differ." << std::endl;
     }
@@ -62,6 +68,8 @@ void model_test(const std::string& output_file, const std::string& expected_file
 
 // Function to compare two output files
 void unit_test(const std::string layer,const std::string& output_file, const std::string& expected_file, float epsilon = 0.001) {
+    using namespace std::chrono;
+    auto start = high_resolution_clock::now();
     auto output_data = read_file_to_vector(output_file);
     auto expected_data = read_file_to_vector(expected_file);
 
@@ -80,8 +88,12 @@ void unit_test(const std::string layer,const std::string& output_file, const std
         }
     }
 
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
+    
     if (test_passed) {
         result_file <<layer<< " Test Passed: All values match within tolerance (" << epsilon << ")." << std::endl;
+        result_file << layer << " Comparison Time: " << duration.count() << " ms" << std::endl;
     } else {
         std::cerr << " Test Failed: Mismatched values found." << std::endl;
     }
