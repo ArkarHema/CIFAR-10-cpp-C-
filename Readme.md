@@ -124,7 +124,7 @@ CIFAR-10-cpp
 
 ```bash
 git clone https://github.com/ArkarHema/CIFAR-10-cpp-C-.git
-cd cpp-cifar-10
+cd CIFAR-10-cpp-C-
 
 ```
 
